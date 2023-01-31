@@ -11,9 +11,9 @@ https://ci5.iarc.fr/ci5plus/Default.aspx
 
 CI5p summary data can also be uploaded via Rcan (See Rcan library in R):
 Not run...
-#library(Rcan)
-#data(ICD_group_GLOBOCAN)
-#data(data_individual_file)
+#library(Rcan);
+#data(ICD_group_GLOBOCAN);
+#data(data_individual_file);
 
 GLOBOCAN 2012, 2018, and 2020 -a comprehensive assessment of the cancer burden worldwide in 3 different points, based on the GLOBOCAN estimates of incidence, mortality, and prevalence for the year 2020 in 185 countries or territories for 36 cancer types by sex and age group.
 Reference: https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.21660
