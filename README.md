@@ -24,7 +24,6 @@ New Age-Period-Cohort analysis (APC)
 https://analysistools.cancer.gov/apc/
 Rosenberg PS, Check DP, Anderson WF. A Web Tool for Age-Period-Cohort Analysis of Cancer Incidence and Mortality Rates. Cancer Epidemiology, Biomarkers Prevent 2014:23:2296, PMID: 25146089
 
-apc2fit
-csv2rates
+apc2fit;csv2rates
 
 #
