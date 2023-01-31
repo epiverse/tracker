@@ -1,4 +1,19 @@
-<h1>epiVerseTracker <sup style="font-size:medium;color:navy;font-weight:normal">[<a href="https://github.com/usm/diff" target="_blank">Code</a>] [<a href="https://observablehq.com/@episphere/usmdiff" target="_blank">Notebook</a>] [YouTube]</sup></h1>
-<hr>
-<link href="https://episphere.github.io/gps/gps.css" rel="stylesheet">
-<script src="tracker.js"></script>
+<head>
+    <link href="https://episphere.github.io/gps/gps.css" rel="stylesheet">
+    <!-- script tag loading to cover all three loading routes (and annoy Praful a bit :-P) -->
+    <script src="tracker.js"></script>
+    <!-- for javascript needed to run this app specific UI. 
+    The alternative would be to have it within a script tag within the html page -->
+    <script async src="index.js"></script>
+</head>
+<body>
+    <h1>epiVerseTracker 
+        <sup style="font-size:medium;color:navy;font-weight:normal">
+            [<a href="https://github.com/usm/diff" target="_blank">Code</a>] 
+            [<a href="https://observablehq.com/@epiverse/tracker" target="_blank">Notebook</a>] 
+            [YouTube]
+        </sup>
+    </h1>
+    <hr>
+    <div id="epiVerseTrackerDiv">...</div>
+</body>
