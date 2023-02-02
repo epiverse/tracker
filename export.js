@@ -21,7 +21,7 @@ iarc.causesGet= async (cause=iarc.causes[0],by=iarc.causesBy[0])=>{
         return undefined
     } 
 }
-iarc.causesGetAll= async function(cache=true){  // retrieve all causal data
+iarc.causesGetAll= async function(cache=false){  // retrieve all causal data
     let dt={}
     iarc.causes.forEach(async c=>{
         dt[c]={}
