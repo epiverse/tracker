@@ -1,14 +1,9 @@
 # tracker
-Public tracker of public cancer data, inspired by IARC
+Public tracker of public cancer data, inspired by IARC, live at https://epiverse.github.io/tracker
 
 ## Description:
 
 Global cancer data available (CI5plus, CI5X and XI, WHO_mortality, GLOBOCAN 2012,2018,2020:
-
-Cancer Incidence in Five Continents (CI5) series is to make available comparable data on cancer incidence worldwide (CI5 Vol. I to X and CI5 Vol. XI).
-The CI5plus database contains updated annual cases of cancer from 108 cancer registries published in CI5, for the longest period available, for 28 major types.
-https://ci5.iarc.fr/ci5plus/Default.aspx
-
 CI5p summary data can also be uploaded via Rcan (See Rcan library in R):
 Not run...
 #library(Rcan);
