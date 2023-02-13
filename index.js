@@ -1,6 +1,7 @@
 // UI manipulation
 console.log('UI fun')
-epiVerseTrackerDiv.innerHTML='-- plot --'
+epiVerseTrackerDiv.innerHTML='<div>-- plot --</div>'
+/*
 terminal.onkeyup=function(ev){
     //console.log(ev.keyCode)
     if(ev.keyCode==13){
@@ -14,3 +15,4 @@ terminal.onkeyup=function(ev){
         //debugger
     }
 }
+*/
