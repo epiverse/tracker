@@ -43,10 +43,48 @@ iarc.causesGetAll= async function(cache=false){  // retrieve all causal data
 }
 // ---------------------------------------------------------------------------
 
+async function getZipURL(url='https://corsproxy.io/?https://ci5.iarc.fr/CI5plus/old/CI5plus_Summary_April2019.zip'){
+    const JSZip = (await import('https://cdn.jsdelivr.net/npm/jszip/+esm')).default
+    let res={}
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            var zip = new JSZip();
+            zip.loadAsync(blob)
+            .then((zip) => {
+                zip.forEach((relativePath, file) => {
+                    file.async("uint8array").then((content) => {
+                        // You will need to handle file content in browser's way like showing on the page or downloading it 
+                        // as creating files directly on user's computer is not allowed for security reasons
+                        console.log("File:", relativePath, "Size:", content.byteLength);
+                        // remove trailing blanks
+                        let txt = (new TextDecoder()).decode(content)
+                        let trailingBlank = txt.match(/[/\n/\r]+$/g)
+                        if(trailingBlank){
+                            txt=txt.slice(0,-(trailingBlank.length+1))
+                        }
+                        // parse text into table
+                        res[relativePath]=(txt).split(/[\n\r]+/g).map(r=>r.split(/[\t,]/g))
+                    });
+                });
+            })
+            .catch((err) => {
+              console.log("Error reading zip:", err);
+            });
+        })
+    .catch((err) => {
+        console.log("Error fetching zip:", err);
+    });
+    return res
+    // try files = getZipURL()
+}
+
+
 export { // these are the methods of epiVerseTracker
     hello,
     cdc,
     seer,
-    iarc
+    iarc,
+    getZipURL
 }
 
